@@ -74,3 +74,6 @@ a.remove(False)
 a = ["apple",54,3,False,"orange",True,False] # remove the first occurence
 a.clear()
 print(a)
+
+a = [1,2,3,[2,3,4]]
+print(a[-1][2])

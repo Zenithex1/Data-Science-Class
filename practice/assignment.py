@@ -1,4 +1,4 @@
-# Python Practice Question (Difficulty 5/5 – Data Analyst Perspective)
+# Python Practice Question (Difficulty 5/5 )
 
 # You are given a dataset of customer purchases:
 
@@ -246,8 +246,6 @@ if employees[5][1] > 0 and employees[5][2] =="Full-Time" and employees[5][3] >0:
         print("Mid Salary Employee")
     else:
         print("Low Salary Employee")
-
-
 
 
 print(valid_employee)
