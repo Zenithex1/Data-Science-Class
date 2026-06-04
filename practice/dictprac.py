@@ -226,3 +226,4 @@ elif data[6] < 0:
 print(f'The number of negative number:{count_negative}')
 print(f'The number of zero number:{count_zero}')
 print(f'The number of positive number:{count_positive}')
+
