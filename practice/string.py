@@ -115,6 +115,9 @@ print(codes)
 phone = "9841234567"
 phone.isdigit()
 
+if len(phone) == 10:
+    print('It is valid')
+
 # ---
 
 # ### 8. File Name Validation
@@ -167,4 +170,9 @@ text = "python data science python analytics python"
 split_text = text.split(" ")
 print(split_text)
 
-# If you can solve these 10 questions confidently, you'll have covered about **90% of the string manipulation tasks commonly used in real Data Analytics and Data Science projects**.
+count = 0
+
+
+ 
+
+

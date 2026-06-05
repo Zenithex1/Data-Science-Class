@@ -1,4 +1,4 @@
-# High-Difficulty Python Practice Questions (Data Analyst Focus)
+# High-Difficulty Python Practice Questions 
 # 1. Customer Filtering
 
 # You are given:
