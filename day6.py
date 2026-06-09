@@ -32,6 +32,8 @@ print(a["temp"])
 print(a["name"])
 # print(a["ages"]) # error 
 
+a.get("name") # returns none if thre is no key
+a.get("jen",5) # returns 5 now
 # update
 a['address'] = 'Dang'
 a["ages"]= 100 # will create a new key value pair
