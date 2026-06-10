@@ -15,8 +15,20 @@ quiz = {
 #     print(question,answer)
 
 import random
+# score = 0
+# while True:
+#     question = random.choice(list(quiz.keys()))
+#     print(question)
+#     user_answer = input("Enter your answer: ").upper()    
+#     if user_answer == quiz[question]:
+#         score += 1
+#         print(f"Your score is {score}")
+#         print("You are correct")
+#     else:
+#         print("You are wrong")
+#     if score == 10:
+#         print("You win")
+#         break
 
-while True:
-    question = random.choice(list(quiz.keys()))
-    print(question)
-    user_answer = input("Enter your answer: ")    
+for question in quiz.keys():
+        print(question)

@@ -172,58 +172,92 @@ data = [45, -2, 78, 0, 15, -8, 99]
 count_positive = 0
 count_zero = 0
 count_negative = 0
-if data[0] > 0:
-    count_positive += 1
-elif data[0] == 0:
-    count_zero += 1
-elif data[0] < 0:
-    count_negative += 1
-
-if data[1] > 0:
-    count_positive += 1
-elif data[1] == 0:
-    count_zero += 1
-elif data[1] < 0:
-    count_negative += 1
-
-if data[2] > 0:
-    count_positive += 1
-elif data[2] == 0:
-    count_zero += 1
-elif data[2] < 0:
-    count_negative += 1
-
-if data[3] > 0:
-    count_positive += 1
-elif data[3] == 0:
-    count_zero += 1
-elif data[3] < 0:
-    count_negative += 1
-
-if data[4] > 0:
-    count_positive += 1
-elif data[4] == 0:
-    count_zero += 1
-elif data[4] < 0:
-    count_negative += 1    
-
-if data[5] > 0:
-    count_positive += 1
-elif data[5] == 0:
-    count_zero += 1
-elif data[5] < 0:
-    count_negative += 1 
-
-if data[6] > 0:
-    count_positive += 1
-elif data[6] == 0:
-    count_zero += 1
-elif data[6] < 0:
-    count_negative += 1 
-
-
-
+for i in data:
+    if  i > 0:
+        count_positive+=1
+    elif i < 0 :
+        count_negative += 1
+    else:
+        count_zero +=1
 print(f'The number of negative number:{count_negative}')
 print(f'The number of zero number:{count_zero}')
 print(f'The number of positive number:{count_positive}')
+
+
+# if data[0] > 0:
+#     count_positive += 1
+# elif data[0] == 0:
+#     count_zero += 1
+# elif data[0] < 0:
+#     count_negative += 1
+
+# if data[1] > 0:
+#     count_positive += 1
+# elif data[1] == 0:
+#     count_zero += 1
+# elif data[1] < 0:
+#     count_negative += 1
+
+# if data[2] > 0:
+#     count_positive += 1
+# elif data[2] == 0:
+#     count_zero += 1
+# elif data[2] < 0:
+#     count_negative += 1
+
+# if data[3] > 0:
+#     count_positive += 1
+# elif data[3] == 0:
+#     count_zero += 1
+# elif data[3] < 0:
+#     count_negative += 1
+
+# if data[4] > 0:
+#     count_positive += 1
+# elif data[4] == 0:
+#     count_zero += 1
+# elif data[4] < 0:
+#     count_negative += 1    
+
+# if data[5] > 0:
+#     count_positive += 1
+# elif data[5] == 0:
+#     count_zero += 1
+# elif data[5] < 0:
+#     count_negative += 1 
+
+# if data[6] > 0:
+#     count_positive += 1
+# elif data[6] == 0:
+#     count_zero += 1
+# elif data[6] < 0:
+#     count_negative += 1 
+
+
+
+# print(f'The number of negative number:{count_negative}')
+# print(f'The number of zero number:{count_zero}')
+# print(f'The number of positive number:{count_positive}')
+
+a = {
+    "Name":"Jenish",
+    "Age":22
+}
+a["Address"] = "Shankhamul"
+print(a)
+a.update(
+    {
+        "Grade":"Bachelor"
+    }
+)
+# print(a)
+
+# for i in a.items():
+#     print(i)
+
+# for i in a.values():
+#     print(i)
+
+for i in a:
+    print(i)
 
