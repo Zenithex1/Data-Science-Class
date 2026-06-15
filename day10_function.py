@@ -46,12 +46,12 @@ print(sum_of_list([1, 2]))
 print(sum_of_list(1))
 
 
-# default arguments
-def sum(a=0, b=0):
-    return a + b
+# # default arguments
+# def sum(a=0, b=0):
+#     return a + b
 
 
-print(sum(2, 4))
+# print(sum(2, 4))
 
 
 def employee(name: str, age):
@@ -117,8 +117,8 @@ print("===================" * 2)
 square = lambda x: x * x
 print(square(5))
 
-sum = lambda a, b: a + b
-print(sum(5, 6))
+add = lambda a, b: a + b
+print(add(5, 6))
 
 
 def add(a):
@@ -160,3 +160,70 @@ print(order_food("Laptop", 10, 9))
 
 a =(1,2,3,4)
 print(len(a))
+
+# keyword arguments
+
+def user_info(**data):
+    print(data)
+    print(type(data))
+
+user_info(name="jenish",age=22)
+
+def test(a,*args,**kwargs):
+    print(a)
+    print(args)
+    print(kwargs)
+
+test(1,2,3,4,5,name = "Jenish")
+print("============"*3)
+# def calculate_salary(base_salary, *bonuses, **deductions):
+    
+#     for i in bonuses:
+#         base_salary = base_salary + i
+#     for i,j in deductions.items():
+#         if isinstance(j, int):
+#                 base_salary = base_salary - j
+#         else:
+#                 print( f"Wrong data type in deduction only integer")
+#                 break
+#     print(base_salary)
+
+def calculate_salary(base_salary,*bonuses,**deductions):
+    if(len(bonuses)==0 and len(deductions)==0):
+        return base_salary
+    total_bonus = sum(bonuses)
+    if len(deductions)==0:
+        return base_salary + total_bonus
+    deductions_values = deductions.values()
+    deductions_total = 0
+    for i in deductions_values:
+        if not isinstance(i,int):
+            continue
+        deductions_total = deductions_total + i
+    return base_salary+ total_bonus - deductions_total
+    
+
+
+
+
+print(calculate_salary(50000))
+
+print(calculate_salary(50000, 2000))
+
+print(calculate_salary(
+    50000,
+    2000,
+    3000,
+    tax=5000
+))
+print(calculate_salary(
+    50000,
+    2000,
+    3000,
+    tax=5000,
+    insurance=1200,
+    extra = "sudan"
+))
+
+# list comprehension
+a =[2,3,4,5,6]
