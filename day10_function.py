@@ -227,3 +227,17 @@ print(calculate_salary(
 
 # list comprehension
 a =[2,3,4,5,6]
+a = lambda *args : [i*i for i in args]
+print(a(13,2,4,56,4,5,3,3))
+
+# local variable / global variable
+
+def square(*args):
+    global output
+    output = []
+    for i in args:
+        output.append(i*i)
+    return output
+
+print(square(1,2,3,4,5))
+print(output)
