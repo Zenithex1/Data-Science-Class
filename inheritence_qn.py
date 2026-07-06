@@ -173,6 +173,7 @@ print("=======================" * 3)
 #         """ 
 # obj = LuxuryCar("BA 12 PA 1234", "Toyota", 5000, 4, "Petrol", 1000, 500)
 # print(obj.vehicle_detail())
+
 # 4. Banking System
 
 # Hierarchy:
@@ -188,7 +189,6 @@ print("=======================" * 3)
 # Calculate annual interest.
 # Calculate cashback earned from transactions.
 # Display complete account information.
-# 5. Employee Promotion System
 
 class Account():
     def __init__(self,accountNumber,holderName,balance):
@@ -196,23 +196,22 @@ class Account():
         self.holderName = holderName
         self.balance = balance
 
-        def deposit(self,amount):
-            self.amount = amount
-            if self.amount>0:
-                self.balance =+ self.amount
+    def deposit(self,amount):
+            if amount>0:
+                self.balance += amount
             else:
                 return 'Cannot deposit less than 0'
             
-        def withdraw(self):
-            if self.amount > 0:
-                self.balance =-self.amount
+    def withdraw(self,amount):
+            if amount > 0 and amount <= self.balance:
+                self.balance -= amount
             else:
                 return 'Cannot withdraw less than 0'
 
-        def AccountInfo(self):
-            return( f'Account Number : {self.accountNumber}\n'
+    def account_info(self):
+            return(f'Account Number : {self.accountNumber}\n'
             f'Holder Name: {self.holderName}\n'
-            f'Balance: {self.Balance}\n'
+            f'Balance: {self.balance}\n'
             )
             
 
@@ -223,10 +222,10 @@ class SavingsAccount(Account):
 
     def interest(self,interest):
         self.interest = interest
-        self.interest = (self.interestRate * self.balance)   /100
+        return f'{(self.interestRate * self.balance)   /100}'
 
     def displaySavingsInfo(self):
-           self.AccountInfo()
+           self.account_info()
            return f'Intrest Rate : {self.interest(10)}'
     
 class PremiumSavingsAccount(SavingsAccount):
@@ -235,12 +234,22 @@ class PremiumSavingsAccount(SavingsAccount):
         self.rewardPoints = rewardPoints
         self.cashbackRate = cashbackRate
 
-    def cashBack(self):
-        self.cashBack = (self.amount * self.cashbackRate)/ 100
-        self.balance += self.cashBack
-        return self.balance
-
-
+    def cashBack(self, transaction_amount):
+        return (transaction_amount * self.cashbackRate) / 100
+    
+    def account_information(self):
+        return(f'{self.account_info()}\n'
+               f'{self.displaySavingsInfo()}\n'
+               f'Cashback:{self.cashBack(1000)}')
+        
+obj = PremiumSavingsAccount(1001,
+    "John",
+    10000,
+    5,
+    500,
+    2)
+print(obj.account_information())
+# 5. Employee Promotion System
 
 # Hierarchy:
 
@@ -255,6 +264,19 @@ class PremiumSavingsAccount(SavingsAccount):
 # Calculate total monthly salary.
 # Display complete employee information.
 # Create at least three project manager records.
+
+class Empoyee():
+     def __init__(self,employee_id,name,basic_salary):
+          self.employee_id = employee_id
+          self.name = name
+          self.basic_salary = basic_salary
+          
+class TeamLead(Employee):
+     def __init__(self, name, age, gender, employeeId, salary):
+          super().__init__(name, age, gender, employeeId, salary)
+          self.team_size=
+class ProjectManager():
+     pass
 # 6. E-Commerce Seller Platform
 
 # Hierarchy:
